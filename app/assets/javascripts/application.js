@@ -31,3 +31,21 @@ $(function(){
 		}
 	});
 });
+$(document).ready(function(){
+    $('#open-id').hide();
+    $('#open-in').hide();
+    $('#id-food').change(function(){
+        if(this.checked)
+            $('#open-id').fadeIn('slow');
+        else
+            $('#open-id').fadeOut('slow');
+
+    });
+    $('#in-food').change(function(){
+        if(this.checked)
+            $('#open-in').fadeIn('slow');
+        else
+            $('#open-in').fadeOut('slow');
+
+    });
+});

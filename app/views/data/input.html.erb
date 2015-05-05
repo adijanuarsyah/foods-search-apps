@@ -1,7 +1,26 @@
 <h1>What foods that what you want?</h1>
-<input id="accept" name="accept" type="checkbox" value="1" />
-<%= form_tag data_search_path, method:'get', remote: true do   %>
-<%= text_field_tag :search, '', size:20, :autocomplete => :off, :class => "searchbox"  %>
-<%= submit_tag 'search', :id => 'search_key'  %>
-<% end %>
+<%= check_box_tag 'id-food', 'indonesian-food'  %>Indonesian food
+<%= check_box_tag 'in-food', 'international-food'  %>International food
+
+	<div id="open-id">
+		<%= render "idfood"  %>
+	</div>
+		<div id="open-in">
+		<h1>Searching for International foods</h1>
+		<h2>Here is suggestion International top dishes</h2>
+		<ul>
+			<li>Hamburger</li>
+			<li>Sandwich</li>
+			<li>Pizza</li>
+			<li>Fried chicken</li>
+			<li>Macaroni</li>
+		</ul>
+	</div>
+	<div id="form_search">
+		<%= form_tag data_search_path, method:'get', remote: true do   %>
+		<%= text_field_tag :search, '', size:20, :autocomplete => :off, :class => "searchbox"  %>
+		<%= submit_tag 'search', :id => 'search_key'  %>
+		<% end %>
+	</div>
+
 <div id="food"></div>

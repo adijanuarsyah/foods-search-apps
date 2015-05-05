@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :cibos
+  root :to => 'data#input'
   get 'data/input'
   get 'data/search'
 
