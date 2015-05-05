@@ -1,0 +1,7 @@
+$(function() {
+	var availableTags = <%= raw @otomatis  %>;
+	$( "#search" ).autocomplete({
+		source: availableTags
+	});
+});
+$('#food_data').html("<%= j render 'food_data'  %>");

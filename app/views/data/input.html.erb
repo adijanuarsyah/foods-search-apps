@@ -1,0 +1,6 @@
+<h1>What foods that what you want?</h1>
+<%= form_tag data_input_path, method:'get', remote: true do   %>
+<%= text_field_tag :search, '', size:20, :autocomplete => :off, :class => "searchbox"  %>
+<% end %>
+<div id="food_data"></div>
+
