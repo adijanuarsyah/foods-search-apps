@@ -1,6 +1,7 @@
 <h1>What foods that what you want?</h1>
-<%= form_tag data_input_path, method:'get', remote: true do   %>
+<input id="accept" name="accept" type="checkbox" value="1" />
+<%= form_tag data_search_path, method:'get', remote: true do   %>
 <%= text_field_tag :search, '', size:20, :autocomplete => :off, :class => "searchbox"  %>
+<%= submit_tag 'search', :id => 'search_key'  %>
 <% end %>
-<div id="food_data"></div>
-
+<div id="food"></div>
