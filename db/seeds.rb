@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Food names i get from http://eatingatoz.com/food-list/
+
+[ "apples", "avocado", "alfalfa", "almond", "arugala", "artichoke", "applesauce", "asian noodles ", "antelope", "ahi tuna", "albacore tuna", "apple juice", "avocado roll", "bruscetta", "bacon", "black beans", "bagels", "baked beans", "bbq", "bison", "barley", "beer", "bisque", "bluefish", "bread", "broccoli", "buritto", "babaganoosh", "cabbage", "cake", "carrots", "carne asada", "celery", "cheese", "chicken", "catfish", "chips", "chocolate", "chowder", "clams", "coffee", "cookies", "corn", "cupcakes", "crab", "curry", "cereal", "chimichanga", "dates", "dips", "dumplings", "donuts", "eggs", "enchilada", "eggrolls", "english muffins", "edimame", "eel sushi", "fajita", "falafel", "fish", "franks", "fondu", "french toast", "french dip", "garlic", "ginger", "gnocchi", "goose", "granola", "grapes", "green beans", "guancamole", "gumbo", "grits", "graham crackers", "ham", "halibut", "hamburger", "honey", "huenos rancheros", "hash browns", "hot dogs", "haiku roll", "hummus", "ice cream", "irish stew", "indian food", "italian bread", "jambalaya", "jelly", "jerky", "kale", "kabobs", "ketchup", "kiwi", "kidney beans", "kingfish", "lobster", "lamb", "linguine", "lasagna", "meatballs", "moose", "milk", "milkshake", "noodles", "ostrich", "pizza", "pepperoni", "porter", "pancakes", "quesadilla", "quiche", "reuben", "spinach", "spaghetti", "tater tots", "toast", "venison", "waffles", "wine", "walnuts", "yogurt", "ziti", "zucchini" ].each do |food_name|
+    Cibo.create!({:name => food_name.titleize})
+end
