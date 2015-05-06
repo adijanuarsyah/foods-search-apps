@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
 $(function(){
 	$('#search').on('keyup', function(){
 		var isi=($('#search').val()).trim()
@@ -32,6 +34,7 @@ $(function(){
 	});
 });
 $(document).ready(function(){
+    
     $('#open-id').hide();
     $('#open-in').hide();
     $('#id-food').change(function(){
