@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Use bootstrap rails
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails' 
+# Use Instagram-ruby-gem
+gem 'instagram', '~> 1.1.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
