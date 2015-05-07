@@ -1,7 +1,7 @@
 
 
 	<h2>Suggestion Indonesian top dishes</h2>
-	<ul>
+	<ul id="foodList">
 		
     		<% TopFood.where(:country => "ind").find_each do  %> 
 			<% rand_number = rand(52) + 1 %> 
@@ -11,3 +11,5 @@
 		<% end %>
 
 	</ul>
+	<div id="loadMore">More sugesstions</div>
+	<div id="showLess">Show less</div>

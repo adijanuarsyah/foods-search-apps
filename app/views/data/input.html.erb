@@ -2,11 +2,14 @@
 	<div class="row row-centered">
 		<div class="col-xs-6 col-centered">
 <h1>What foods that what you want?</h1>
-<%= check_box_tag 'id-food', 'indonesian-food'  %>
-<%= label_tag 'id-food', 'Indonesian food' %>
-<%= check_box_tag 'in-food', 'international-food'  %>
-<%= label_tag 'in-food', 'International food' %>
-
+<div class="checkbox">
+<%= check_box_tag 'id-food', 'indonesian-food', class: 'checkbox'  %>
+<%= label_tag :checkbox, 'Indonesian food' %>
+</div>
+<div class="checkbox">
+<%= check_box_tag 'in-food', 'international-food', class: 'checkbox'  %>
+<%= label_tag :checkbox, 'International food' %>
+</div>
 	<div id="open-id">
 		<%= render "idfood"  %>
 	</div>

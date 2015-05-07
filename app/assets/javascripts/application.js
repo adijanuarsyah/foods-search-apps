@@ -33,6 +33,30 @@ $(function(){
 		}
 	});
 });
+//jquery load more http://stackoverflow.com/users/2224265/tushar-gupta
+$(document).ready(function () {
+    size_li = $("#foodList li").size();
+    x=3;
+    $('#foodList li:lt('+x+')').show();
+    $('#loadMore').click(function () {
+        x= (x+5 <= size_li) ? x+5 : size_li;
+        $('#foodList li:lt('+x+')').show();
+         $('#showLess').show();
+        if(x == size_li){
+            $('#loadMore').hide();
+        }
+    });
+    $('#showLess').click(function () {
+        x=(x-5<0) ? 3 : x-5;
+        $('#foodList li').not(':lt('+x+')').hide();
+        $('#loadMore').show();
+         $('#showLess').show();
+        if(x == 3){
+            $('#showLess').hide();
+        }
+    });
+});
+
 $(document).ready(function(){
     
     $('#open-id').hide();
@@ -52,3 +76,4 @@ $(document).ready(function(){
 
     });
 });
+
