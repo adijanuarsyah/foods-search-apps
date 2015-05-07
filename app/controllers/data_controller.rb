@@ -6,7 +6,6 @@ class DataController < ApplicationController
   end
 
   def checkbox
-    
   end
 
   def search
