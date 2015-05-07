@@ -1,11 +1,13 @@
 
 
-<h2>Suggestion Indonesian top dishes</h2>
+	<h2>Suggestion Indonesian top dishes</h2>
 	<ul>
 		
-			<li><%= @foods.name  %></li> 
-			<!-- <li>Bakso</li>
-			<li>Ayam Bakar</li>
-			<li>Ikan Bakar</li>
-			<li>Gulai</li> -->
+    		<% TopFood.find_each(start: 20, batch_size: 20) do |foods| %> 
+			<% rand_number = rand(10) + 1 %>   
+    			<% @foods = TopFood.find(rand_number) %>
+    				<li><%= @foods.name  %></li> 
+    			<% puts @foods.inspect %> 
+		<% end %>
+
 	</ul>

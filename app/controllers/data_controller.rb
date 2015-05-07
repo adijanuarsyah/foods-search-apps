@@ -1,8 +1,8 @@
 class DataController < ApplicationController
   def input
-    rand_number = rand(10) + 1
-    @foods = TopFood.find(rand_number)
-    puts @foods.inspect
+    # rand_number = rand(10) + 1
+    # @foods = TopFood.find(rand_number)
+    # puts @foods.inspect
   end
 
   def checkbox
