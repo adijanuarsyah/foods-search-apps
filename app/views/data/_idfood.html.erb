@@ -1,15 +1,11 @@
+<h2>Suggestion Indonesian top dishes</h2>
+<ul id="foodList">
 
+    	<% TopFood.where(:country => 'ind').order('RANDOM()').find_each do |food| %>
+    	<li><%= food.name  %></li>
+    	<% puts food.inspect %> 
+	<% end %>
 
-	<h2>Suggestion Indonesian top dishes</h2>
-	<ul id="foodList">
-		
-    		<% TopFood.where(:country => "ind").find_each do  %> 
-			<% rand_number = rand(52) + 1 %> 
-    			<% @foods = TopFood.find(rand_number)%>
-    				<li><%= @foods.name  %></li> 
-    			<% puts @foods.inspect %> 
-		<% end %>
-
-	</ul>
-	<div id="loadMore">More sugesstions</div>
-	<div id="showLess">Show less</div>
+</ul>
+<div id="loadMore">More sugesstions</div>
+<div id="showLess">Show less</div>

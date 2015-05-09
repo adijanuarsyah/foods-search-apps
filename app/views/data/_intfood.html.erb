@@ -1,0 +1,15 @@
+
+
+	<h2>Suggestion Indonesian top dishes</h2>
+	<ul id="foodList">
+		
+    		<% TopFood.where(:country => "inte").find_each do  %> 
+			<% rand_number = rand(52) + 1 %> 
+    			<% @foods = TopFood.where(:country => "inte").find(rand_number)%>
+    				<li><%= @foods.name  %></li> 
+    			<% puts @foods.inspect %> 
+		<% end %>
+
+	</ul>
+	<div id="loadMore">More sugesstions</div>
+	<div id="showLess">Show less</div>
