@@ -1,1 +1,6 @@
 <p>Name : <%= raw @query_full.try(:name) %></p>
+<% @results.each do |ig| %>
+<li>
+<%= image_tag ig.images.thumbnail.url  %>
+</li>
+<% end %>

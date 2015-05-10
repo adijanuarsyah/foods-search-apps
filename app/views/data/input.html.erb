@@ -13,16 +13,8 @@
 	<div id="open-id">
 		<%= render "idfood"  %>
 	</div>
-		<div id="open-in">
-		<h1>Searching for International foods</h1>
-		<h2>Here is suggestion International top dishes</h2>
-		<ul>
-			<li>Hamburger</li>
-			<li>Sandwich</li>
-			<li>Pizza</li>
-			<li>Fried chicken</li>
-			<li>Macaroni</li>
-		</ul>
+	<div id="open-in">
+		<%= render "intfood"  %>
 	</div>
 	<div id="form_search">
 		<%= form_tag data_search_path, method:'get', remote: true do   %>
